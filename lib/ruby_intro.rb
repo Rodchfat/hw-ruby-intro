@@ -3,7 +3,7 @@
 # Part 1
 
 def sum arr
-  if array.nil? then return "Zero"
+  if array.empty? then return "Zero"
 	else
 		array.inject(0) do |sum, num|
 			sum += num
@@ -12,14 +12,14 @@ def sum arr
 end
 
 def max_2_sum arr
-  if array.nil? then return "zero"
-	elsif array[1] == nil then return array[0]
-	else array.sort.last(2).inject(:+)
-	end
+if array.empty? then return "zero"
+elsif array[1] == nil then return array[0]
+else array.sort.last(2).inject(:+)
+end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  (arr.empty? && n.zero?) || arr.permutation(2).any? { |a, b| a + b == n }
 end
 
 # Part 2
