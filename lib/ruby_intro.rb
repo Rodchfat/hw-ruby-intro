@@ -3,9 +3,9 @@
 # Part 1
 
 def sum arr
-  if array.empty? then return "Zero"
+  if arr.empty? then return "Zero"
 	else
-		array.inject(0) do |sum, num|
+		arr.inject(0) do |sum, num|
 			sum += num
 		end
 	end
@@ -13,8 +13,8 @@ end
 
 def max_2_sum arr
 if array.empty? then return "zero"
-elsif array[1] == nil then return array[0]
-else array.sort.last(2).inject(:+)
+elsif arr[1] == nil then return arr[0]
+else arr.sort.last(2).inject(:+)
 end
 end
 
@@ -25,15 +25,22 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello" "#{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  s.start_with?('a','e','i','o','u')
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if (s) == "0"
+    return true
+end
+if /^[01]*(00)$/.match(s) #|| /^0$/.match(s)
+    return true
+else
+    return false
+end
 end
 
 # Part 3
