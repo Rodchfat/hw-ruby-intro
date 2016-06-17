@@ -3,12 +3,12 @@
 # Part 1
 
 def sum arr
-  if arr.empty? then return "Zero"
-	else
-		arr.inject(0) do |sum, num|
-			sum += num
-		end
-	end
+if arr.empty? then return "Zero"
+else
+arr.inject(0) do |sum, num|
+sum += num
+end
+end
 end
 
 def max_2_sum arr
@@ -46,5 +46,31 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+#getters and setters
+  attr_accessor :isbn, :price
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = price
+  end
+  def isbn(isbn)
+    if isbn == ''
+      raise ArgumentError.new("Must have an ISBN number")
+    end
+    @isbn = isbn
+  end
+
+  def price(price)
+    price = price.to_f
+    if price <= 0
+      raise ArgumentError.new("Must have price")
+    end
+    @price = price
+  end
+  
+  def price_as_string
+    return  "$" + sprintf("%.2f", @price)
+  end
 end
+bookinstock = BookInStock.new('', 20)
+bookinstock.price_as_string
+
